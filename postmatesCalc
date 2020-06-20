@@ -1,0 +1,35 @@
+#include <iostream>
+
+double getDeliveryPay()
+{
+    std::cout << "How much did you get paid: ";
+    double pay{};
+    std::cin >> pay;
+
+    return pay;
+}
+
+void calcPay(double pay)
+{
+    double self{pay * 0.4};
+    std::cout << "Own spending money is " << self << '\n';
+
+    double car{pay * 0.2};
+    std::cout << "Money for the car is " << car << '\n';
+
+    double taxes{pay * 0.15};
+    std::cout << "Money for taxes is " << taxes << '\n';
+
+    double i{pay * 0.125};
+    std::cout << "Money for savings is " << i << '\n';
+
+    std::cout << "Money for investments is " << i << '\n';
+}
+
+int main()
+{
+
+    calcPay(getDeliveryPay());
+
+    return 0;
+}
